@@ -1,6 +1,6 @@
 # CoreCode-bootcamp-fullstack-2022-03-Challenges
 
-`Week 1- Challenge-1.1 (Tuesday) -> 07/18/2022`\
+`Week 1- Challenge-1.1 (Tuesday) -> 07/19/2022`\
 `Ensure question` \
 Given a string, write a function that returns the string with a question mark ("?") appends to the end, unless the original string ends with a question mark, in which case, returns the original string 
 ```js
@@ -11,7 +11,7 @@ function ensureQuestion(s) {
 }
 ```
 
-` Week 1 - Challenge-1.2 (Tuesday) -> 07/18/2022` \
+` Week 1 - Challenge-1.2 (Tuesday) -> 07/19/2022` \
 `Reversed Words` \
 Complete the solution so that it reverses all of the words within the string passed in.
 Example(Input --> Output):
@@ -24,7 +24,7 @@ function reverseWords(str){
     
 }
 ```
-`Week 1 Challenge-2 (Wednesday) -> 07/19/2022` \ 
+`Week 1 Challenge-2 (Wednesday) -> 07/20/2022` \ 
 `Find the smallest ingeger in the Array` \
 Given an array of integers your solution should find the smallest integer.
 
@@ -42,7 +42,7 @@ class SmallestIntegerFinder {
 }
 ```
 
-`Week 1 Challenge-3 (Thursday) -> 07/26/2022 ` \ 
+`Week 1 Challenge-3 (Thursday) -> 07/21/2022 ` \ 
 `OddorEven` \
 Task:
 Given a list of integers, determine whether the sum of its elements is odd or even.
@@ -79,3 +79,69 @@ function oddOrEven2(array) {
     return array.reduce((previousValue, currentValue) => previousValue + currentValue, 0)%2 === 0 ? 'even' : 'odd';    
 }
 ```
+`Week 2 Challenge-1 (Monday) -> 07/25/2022` \ 
+`Palindrome strings` \
+A palindrome is a word, phrase, number, or other sequence of characters which reads the same backward or forward. This includes capital letters, punctuation, and word dividers.
+
+Implement a function that checks if something is a palindrome. If the input is a number, convert it to string first.
+
+Examples(Input ==> Output)
+"anna"   ==> true
+"walter" ==> false
+12321    ==> true
+123456   ==> false 
+```js
+function isPalindrome(line) {
+    return line.toString().split('').reverse().join('') === line.toString()? true:false;
+}
+```
+
+`Week 2 Challenge-2 (Tuesday) -> 07/26/2022` \
+`Well of Ideas - Easy Version` \
+For every good kata idea there seem to be quite a few bad ones!
+
+In this kata you need to check the provided array (x) for good ideas 'good' and bad ideas 'bad'. If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'. 
+If there are no good ideas, as is often the case, return 'Fail!'. 
+
+```js
+function well(x){
+  
+    let counterGood=0;
+    for(let i=0;i<x.length;i++){
+      if(x[i].toString().toLowerCase().includes("good")){
+        counterGood++;
+      }
+    }
+    
+    let result="Fail!";
+    if(counterGood>0){
+      result="Publish!";
+      if(counterGood>2){
+        result="I smell a series!";
+      }
+      
+    }
+    
+    return result;
+  }
+
+  //option 2
+  const well = x => {
+    const good_count = x.filter(x => x == 'good').length;
+    return good_count < 1 ? 'Fail!' : 
+           good_count < 3 ? 'Publish!' : 'I smell a series!';
+  }
+
+  //option 3
+  function well(x) {
+    switch (x.filter(i => i === 'good').length) {
+      case 0:
+        return 'Fail!'
+      case 1:
+      case 2:
+        return 'Publish!'
+      default:
+        return 'I smell a series!'
+    }
+  }
+  ```

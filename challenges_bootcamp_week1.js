@@ -3,7 +3,7 @@
  */
 
 
-/* Week 1 Challenge1 (Tuesday) -> 07/18/2022
+/* Week 1 Challenge1 (Tuesday) -> 07/19/2022
 Ensure question 
 Given a string, write a function that returns the string with a question mark ("?") 
 appends to the end, unless the original string ends with a question mark, in which case, 
@@ -14,7 +14,7 @@ function ensureQuestion(s) {
     
 }
 
-/* Week 1 Challenge1.1 (Tuesday) -> 07/18/2022
+/* Week 1 Challenge1.1 (Tuesday) -> 07/19/2022
 Reversed Words
 Complete the solution so that it reverses all of the words within the string passed in.
 
@@ -26,7 +26,7 @@ function reverseWords(str){
     
 }
 
-/* Week 1 Challenge (Wednesday) -> 07/19/2022 
+/* Week 1 Challenge (Wednesday) -> 07/20/2022 
 Find the smallest ingeger in the Array
 Given an array of integers your solution should find the smallest integer.
 
@@ -40,7 +40,7 @@ class SmallestIntegerFinder {
         return Math.min(...args);
     }
 }
-/* Week 1 Challenge (Thursday) -> 07/26/2022 
+/* Week 1 Challenge (Thursday) -> 07/21/2022 
 OddorEven
 Task:
 Given a list of integers, determine whether the sum of its elements is odd or even.
