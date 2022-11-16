@@ -96,5 +96,54 @@ export const EggList = (props) => {
 };
 
 export const EasterEgg = (props) => {
-  <li>{props.name}</li>
+  return <li key={props.key}>{props.name}</li>;
 };
+/*
+//solution example 1
+import React from 'react';
+
+export const EggList = ({eggs}) => {
+
+  return (
+    <ul>
+    {eggs.map((item, key) => {
+      return <EasterEgg key={key} name={item} />;
+    })
+    }
+    </ul>
+  );
+  
+};
+
+export const EasterEgg = ({name}) => {
+  return (
+    <li>{name}</li>
+  );
+};
+
+//solution example 2
+import React from 'react';
+
+
+export const EggList = (props) => {
+  return <ul>{props.eggs.map((egg, index) => <EasterEgg key={index} name={egg}/>)} </ul>
+};
+
+export const EasterEgg = (props) => {
+  const name = props.name;
+  return( <li key={name} >{name}</li>)
+
+};
+
+//solution example 3
+const React = require('react');
+
+const EggList = ({eggs}) => {
+  return <ul>{eggs.map((v, i) => <EasterEgg name={v} key={i} />)}</ul>;
+};
+ 
+const EasterEgg = ({name,key}) => {
+  return <li key={key}>{name}</li>;
+};
+
+*/
